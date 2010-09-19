@@ -30,129 +30,162 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- 007 Core utilities used by other modules. 008 Define this if you use 
-			Spring Utility APIs (org.springframework.core.*/org.springframework.util.*) 
-			009 -->
+		<!--
+			007 Core utilities used by other modules. 008 Define this if you use
+			Spring Utility APIs
+			(org.springframework.core.*/org.springframework.util.*) 009
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 017 Expression Language (depends on spring-core) 018 Define this if 
-			you use Spring Expression APIs (org.springframework.expression.*) 019 -->
+		<!--
+			017 Expression Language (depends on spring-core) 018 Define this if
+			you use Spring Expression APIs (org.springframework.expression.*) 019
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-expression</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 027 Bean Factory and JavaBeans utilities (depends on spring-core) 
-			028 Define this if you use Spring Bean APIs (org.springframework.beans.*) 
-			029 -->
+		<!--
+			027 Bean Factory and JavaBeans utilities (depends on spring-core) 028
+			Define this if you use Spring Bean APIs (org.springframework.beans.*)
+			029
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 037 Aspect Oriented Programming (AOP) Framework (depends on spring-core, 
-			spring-beans) 038 Define this if you use Spring AOP APIs (org.springframework.aop.*) 
-			039 -->
+		<!--
+			037 Aspect Oriented Programming (AOP) Framework (depends on
+			spring-core, spring-beans) 038 Define this if you use Spring AOP APIs
+			(org.springframework.aop.*) 039
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 047 Application Context (depends on spring-core, spring-expression, 
-			spring-aop, spring-beans) 048 This is the central artifact for Spring's Dependency 
-			Injection Container and is generally always defined 049 -->
+		<!--
+			047 Application Context (depends on spring-core, spring-expression,
+			spring-aop, spring-beans) 048 This is the central artifact for
+			Spring's Dependency Injection Container and is generally always
+			defined 049
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 057 Various Application Context utilities, including EhCache, JavaMail, 
-			Quartz, and Freemarker integration 058 Define this if you need any of these 
-			integrations 059 -->
+		<!--
+			057 Various Application Context utilities, including EhCache,
+			JavaMail, Quartz, and Freemarker integration 058 Define this if you
+			need any of these integrations 059
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 067 Transaction Management Abstraction (depends on spring-core, spring-beans, 
-			spring-aop, spring-context) 068 Define this if you use Spring Transactions 
-			or DAO Exception Hierarchy 069 (org.springframework.transaction.*/org.springframework.dao.*) 
-			070 -->
+		<!--
+			067 Transaction Management Abstraction (depends on spring-core,
+			spring-beans, spring-aop, spring-context) 068 Define this if you use
+			Spring Transactions or DAO Exception Hierarchy 069
+			(org.springframework.transaction.*/org.springframework.dao.*) 070
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 078 JDBC Data Access Library (depends on spring-core, spring-beans, 
-			spring-context, spring-tx) 079 Define this if you use Spring's JdbcTemplate 
-			API (org.springframework.jdbc.*) 080 -->
+		<!--
+			078 JDBC Data Access Library (depends on spring-core, spring-beans,
+			spring-context, spring-tx) 079 Define this if you use Spring's
+			JdbcTemplate API (org.springframework.jdbc.*) 080
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 088 Object-to-Relation-Mapping (ORM) integration with Hibernate, JPA, 
-			and iBatis. 089 (depends on spring-core, spring-beans, spring-context, spring-tx) 
-			090 Define this if you need ORM (org.springframework.orm.*) 091 -->
+		<!--
+			088 Object-to-Relation-Mapping (ORM) integration with Hibernate, JPA,
+			and iBatis. 089 (depends on spring-core, spring-beans,
+			spring-context, spring-tx) 090 Define this if you need ORM
+			(org.springframework.orm.*) 091
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 099 Object-to-XML Mapping (OXM) abstraction and integration with JAXB, 
-			JiBX, Castor, XStream, and XML Beans. 100 (depends on spring-core, spring-beans, 
-			spring-context) 101 Define this if you need OXM (org.springframework.oxm.*) 
-			102 -->
+		<!--
+			099 Object-to-XML Mapping (OXM) abstraction and integration with
+			JAXB, JiBX, Castor, XStream, and XML Beans. 100 (depends on
+			spring-core, spring-beans, spring-context) 101 Define this if you
+			need OXM (org.springframework.oxm.*) 102
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 110 Web application development utilities applicable to both Servlet 
-			and Portlet Environments 111 (depends on spring-core, spring-beans, spring-context) 
-			112 Define this if you use Spring MVC, or wish to use Struts, JSF, or another 
-			web framework with Spring (org.springframework.web.*) 113 -->
+		<!--
+			110 Web application development utilities applicable to both Servlet
+			and Portlet Environments 111 (depends on spring-core, spring-beans,
+			spring-context) 112 Define this if you use Spring MVC, or wish to use
+			Struts, JSF, or another web framework with Spring
+			(org.springframework.web.*) 113
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 121 Spring MVC for Servlet Environments (depends on spring-core, spring-beans, 
-			spring-context, spring-web) 122 Define this if you use Spring MVC with a 
-			Servlet Container such as Apache Tomcat (org.springframework.web.servlet.*) 
-			123 -->
+		<!--
+			121 Spring MVC for Servlet Environments (depends on spring-core,
+			spring-beans, spring-context, spring-web) 122 Define this if you use
+			Spring MVC with a Servlet Container such as Apache Tomcat
+			(org.springframework.web.servlet.*) 123
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 131 Spring MVC for Portlet Environments (depends on spring-core, spring-beans, 
-			spring-context, spring-web) 132 Define this if you use Spring MVC with a 
-			Portlet Container (org.springframework.web.portlet.*) 133 -->
+		<!--
+			131 Spring MVC for Portlet Environments (depends on spring-core,
+			spring-beans, spring-context, spring-web) 132 Define this if you use
+			Spring MVC with a Portlet Container
+			(org.springframework.web.portlet.*) 133
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc-portlet</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- 141 Support for testing Spring applications with tools such as JUnit 
-			and TestNG 142 This artifact is generally always defined with a 'test' scope 
-			for the integration testing framework and unit testing stubs 143 -->
+		<!--
+			141 Support for testing Spring applications with tools such as JUnit
+			and TestNG 142 This artifact is generally always defined with a
+			'test' scope for the integration testing framework and unit testing
+			stubs 143
+		-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -176,6 +209,21 @@
 			<version>1.1</version>
 		</dependency>
 
-
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>2.0.2</version>
+			<configuration>
+			<source>1.6</source>
+			<target>1.6</target>
+			
+			</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
 </project>
