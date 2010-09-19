@@ -52,7 +52,7 @@ public class ThsaleCrawler {
 			}
 		}
 
-		mailService.send("zeng.hengxing@goodhope.net", "thsale", mailContent.toString());
+		mailService.sendSimpleMail("zeng.hengxing@goodhope.net", "thsale", mailContent.toString());
 
 	}
 }

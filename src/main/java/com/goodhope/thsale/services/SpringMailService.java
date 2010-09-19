@@ -7,7 +7,7 @@ public class SpringMailService {
 
 	private MailSender javaMailSender;
 
-	public void send(String to, String subject, String content) {
+	public void sendSimpleMail(String to, String subject, String content) {
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setTo(to);
 		message.setSubject(subject);
