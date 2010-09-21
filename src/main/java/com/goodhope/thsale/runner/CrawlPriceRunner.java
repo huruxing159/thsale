@@ -33,7 +33,7 @@ public class CrawlPriceRunner implements Runnable {
 			String[] split = priceListString.split("\\|");
 			for (String item : split) {
 				/*
-				 * itemµÄÄÚÈİ 572196e2-16a9-42c1-a9fa-9d58fe5333fb@100000 Gold@$ 393.76^? 303.97^? 253.12
+				 * item content 572196e2-16a9-42c1-a9fa-9d58fe5333fb@100000 Gold@$ 393.76^? 303.97^? 253.12
 				 */
 				if (!item.contains("@")) {
 					continue;
