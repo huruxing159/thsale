@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" default-autowire="byName">
+
+	<bean id="job" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.goodhope.thsale.scheduler.CrawlAndEmailJob"></property>
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="crawlServerInfoService">
+					<ref bean="crawlServerInfoService" />
+				</entry>
+				<entry key="springMailService">
+					<ref bean="springMailService" />
+				</entry>
+				<entry key="mailTo" value="${mail.to}">
+				</entry>
+			</map>
+		</property>
+
+	</bean>
+
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="job" />
+		</property>
+		<property name="cronExpression">
+			<value>0 0 * * * ?</value>
+		</property>
+	</bean>
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

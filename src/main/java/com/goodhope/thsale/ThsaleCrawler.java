@@ -25,7 +25,7 @@ public class ThsaleCrawler {
 	private static final Logger LOG = Logger.getLogger(ThsaleCrawler.class);
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		URL us_thsaleUrl = new URL("http://www.thsale.com/world-of-warcraft-eu/");
+		URL us_thsaleUrl = new URL("http://www.thsale.com/world-of-warcraft/");
 		URL eu_thsaleUrl = new URL("http://www.thsale.com/world-of-warcraft-eu/");
 		CrawlServerInfoService crawlServerInfoService = (CrawlServerInfoService) SpringBeanFactory.getBean("crawlServerInfoService");
 
@@ -33,7 +33,6 @@ public class ThsaleCrawler {
 		LOG.debug("us complete.......................");
 		List<ThsaleServer> euThsaleServers = crawlServerInfoService.crawlGameServersInfo(eu_thsaleUrl);
 		LOG.debug("eu complete.......................");
-
 		Map<String, List<ThsaleServer>> serverMap = new HashMap<String, List<ThsaleServer>>();
 		serverMap.put("us", usThsaleServers);
 		serverMap.put("eu", euThsaleServers);
@@ -44,7 +43,7 @@ public class ThsaleCrawler {
 		String fileFullName = System.getProperty("user.dir") + System.getProperty("file.separator") + "workbook.xls";
 		sendEmail(new String[] { fileFullName });
 		LOG.info("send email complete..........................");
-
+		
 	}
 
 	private static void sendEmail(String[] attachments) {

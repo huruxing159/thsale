@@ -11,7 +11,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<org.springframework.version>3.0.0.RELEASE</org.springframework.version>
+		<org.springframework.version>3.0.4.RELEASE</org.springframework.version>
 	</properties>
 
 	<dependencies>
@@ -154,6 +154,11 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.9</version>
 		</dependency>
+		<dependency>
+			<groupId>quartz</groupId>
+			<artifactId>quartz</artifactId>
+			<version>1.5.2</version>
+		</dependency>
 
 	</dependencies>
 	<build>
@@ -173,12 +178,12 @@
 				<version>1.1.1</version>
 				<executions>
 					<execution>
-						<phase>compile</phase>
+						<phase>test</phase>
 						<goals>
 							<goal>java</goal>
 						</goals>
 						<configuration>
-							<mainClass>com.goodhope.thsale.ThsaleCrawler</mainClass>
+							<mainClass>com.goodhope.thsale.CrawlerStarter</mainClass>
 							<arguments>
 								<argument>arg0</argument>
 								<argument>arg1</argument>

@@ -23,14 +23,14 @@ public class CrawlServerInfoService {
 		List<ThsaleServer> thsaleServers = new ArrayList<ThsaleServer>();
 		for (Element server : servers) {
 			if (server.getAttributeValue("value") != null && !server.getAttributeValue("value").equals("")) {
-				ThsaleServer ts1 = new ThsaleServer();
-				ts1.setServerName(server.getTextExtractor().toString());
-				ts1.setThsaleValue(server.getAttributeValue("value"));
-				thsaleServers.add(ts1);
+				ThsaleServer ts = new ThsaleServer();
+				ts.setServerName(server.getTextExtractor().toString());
+				ts.setThsaleValue(server.getAttributeValue("value"));
+				thsaleServers.add(ts);
 			}
 		}
 
-		ExecutorService executorService = Executors.newFixedThreadPool(20);
+		ExecutorService executorService = Executors.newFixedThreadPool(2);
 		for (ThsaleServer ts : thsaleServers) {
 			executorService.execute(new CrawlPriceRunner(ts));
 		}

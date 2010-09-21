@@ -21,7 +21,8 @@ public class SpringMailServiceTest {
 
 	@Test
 	public void testSendMimeMail() {
-		springMailService.sendMimeMail("hu.ruxing@goodhope.net", "test", "test",new String[]{ "/testMailFile.properties"});
+		String testFilePath = System.getProperty("user.dir") + System.getProperty("file.separator") + "pom.xml";
+		springMailService.sendMimeMail("hu.ruxing@goodhope.net", "test", "test", new String[] { testFilePath });
 	}
 
 	public void setSpringMailService(SpringMailService springMailService) {
