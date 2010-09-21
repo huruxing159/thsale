@@ -178,7 +178,7 @@
 				<version>1.1.1</version>
 				<executions>
 					<execution>
-						<phase>test</phase>
+						<phase>package</phase>
 						<goals>
 							<goal>java</goal>
 						</goals>
