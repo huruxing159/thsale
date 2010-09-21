@@ -1,12 +1,10 @@
 package com.goodhope.thsale.runner;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.springframework.util.StringUtils;
-
 import net.htmlparser.jericho.Source;
+
+import org.springframework.util.StringUtils;
 
 import com.goodhope.thsale.domain.PriceItem;
 import com.goodhope.thsale.domain.ThsaleServer;
@@ -46,14 +44,6 @@ public class CrawlPriceRunner implements Runnable {
 				int goleAmount = Integer.parseInt(numberUtil.parseAmount(itemDetail[1]));
 				String[] price = numberUtil.parsePrice(itemDetail[2]);
 				priceItem.setGoldAmount(goleAmount);
-//				System.out.println(itemDetail[1]);
-//				System.out.println(numberUtil.parseAmount(itemDetail[1]));
-//				System.out.println("---");
-//				System.out.println(itemDetail[2]);
-//				System.out.println(price[1]);
-//				System.out.println(price[2]);
-//				System.out.println(price[3]);
-//				System.out.println("===============");
 				priceItem.setUsd(Float.parseFloat(price[1]));
 				priceItem.setEur(Float.parseFloat(price[2]));
 				priceItem.setGbp(Float.parseFloat(price[3]));
