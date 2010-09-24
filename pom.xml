@@ -172,6 +172,7 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
@@ -188,10 +189,12 @@
 								<argument>arg0</argument>
 								<argument>arg1</argument>
 							</arguments>
+
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
+
 		</plugins>
 
 	</build>
