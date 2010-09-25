@@ -12,9 +12,11 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 public class SpringMailService {
 
 	private JavaMailSender javaMailSender;
+	private String from;
 
 	public void sendSimpleMail(String to, String subject, String content) {
 		SimpleMailMessage message = new SimpleMailMessage();
+		message.setFrom(this.from);
 		message.setTo(to);
 		message.setSubject(subject);
 		message.setText(content);
@@ -22,12 +24,14 @@ public class SpringMailService {
 
 	}
 
-	public void sendMimeMail(String to, String subject, String content, String[] paths) {
+	public void sendMimeMail(String to, String subject, String content,
+			String[] paths) {
 
 		MimeMessage mime = javaMailSender.createMimeMessage();
 		MimeMessageHelper helper;
 		try {
 			helper = new MimeMessageHelper(mime, true, "utf-8");
+			helper.setFrom(this.from);
 			helper.setTo(to);
 			helper.setSubject(subject);
 			helper.setText(content);
@@ -43,6 +47,10 @@ public class SpringMailService {
 
 	public void setJavaMailSender(JavaMailSender javaMailSender) {
 		this.javaMailSender = javaMailSender;
+	}
+
+	public void setFrom(String from) {
+		this.from = from;
 	}
 
 }
