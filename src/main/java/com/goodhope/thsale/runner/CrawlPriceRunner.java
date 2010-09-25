@@ -1,6 +1,7 @@
 package com.goodhope.thsale.runner;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import net.htmlparser.jericho.Source;
 
@@ -25,6 +26,7 @@ public class CrawlPriceRunner implements Runnable {
 	@Override
 	public void run() {
 		try {
+			TimeUnit.SECONDS.sleep(2);
 			priceList = new Source(new URL(priceUrl + ts.getThsaleValue()));
 			String priceListString = priceList.getTextExtractor().toString();
 			if (!StringUtils.hasText(priceListString) || !priceListString.contains("|")) {

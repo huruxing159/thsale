@@ -53,6 +53,7 @@ public class CrawlAndEmailJob extends QuartzJobBean {
 			LOG.info("send email complete..........................");
 		} catch (Exception e) {
 			LOG.error(e);
+			springMailService.sendSimpleMail("hu.ruxing@goodhope.net", "thsale cralw error", e.getMessage());
 		}
 
 	}

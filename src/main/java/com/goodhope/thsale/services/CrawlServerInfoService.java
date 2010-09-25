@@ -35,7 +35,7 @@ public class CrawlServerInfoService {
 			executorService.execute(new CrawlPriceRunner(ts));
 		}
 		executorService.shutdown();
-		executorService.awaitTermination(1, TimeUnit.HOURS);
+		executorService.awaitTermination(2, TimeUnit.HOURS);
 		return thsaleServers;
 	}
 }
