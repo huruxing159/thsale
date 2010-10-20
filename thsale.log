@@ -1,0 +1,40 @@
+010 27,2010 01:10:51 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@771eb1: startup date [Mon Sep 27 13:10:51 CST 2010]; root of context hierarchy
+010 27,2010 01:10:51 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext.xml]
+010 27,2010 01:10:52 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-mail.xml]
+010 27,2010 01:10:52 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-util.xml]
+010 27,2010 01:10:52 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-service.xml]
+010 27,2010 01:10:52 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-timer.xml]
+010 27,2010 01:10:52 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading properties file from class path resource [mail.properties]
+010 27,2010 01:10:52 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1e82b72: defining beans [propertyPlaceholderConfigure,crawlerStarter,springMailService,javaMailSender,numberUtil,crawlServerInfoService,job,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+010 27,2010 01:10:53 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Quartz Scheduler v.1.5.2 created.
+010 27,2010 01:10:53 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] RAMJobStore initialized.
+010 27,2010 01:10:53 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+010 27,2010 01:10:53 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Quartz scheduler version: 1.5.2
+010 27,2010 01:10:53 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@1811e2c
+010 27,2010 01:10:53 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Starting beans in phase 2147483647
+010 27,2010 01:10:53 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Starting Quartz Scheduler now
+010 27,2010 01:10:53 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+011 27,2010 01:11:55 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@158689a: startup date [Mon Sep 27 13:11:55 CST 2010]; root of context hierarchy
+011 27,2010 01:11:55 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext.xml]
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-mail.xml]
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-util.xml]
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-service.xml]
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-timer.xml]
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading properties file from class path resource [mail.properties]
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1de6817: defining beans [propertyPlaceholderConfigure,crawlerStarter,springMailService,javaMailSender,numberUtil,crawlServerInfoService,job,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Quartz Scheduler v.1.5.2 created.
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] RAMJobStore initialized.
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Quartz scheduler version: 1.5.2
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@ad5fab
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Starting beans in phase 2147483647
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Starting Quartz Scheduler now
+011 27,2010 01:11:56 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+030 27,2010 01:30:35 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@29d294: startup date [Mon Sep 27 13:30:35 CST 2010]; root of context hierarchy
+030 27,2010 01:30:36 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext.xml]
+030 27,2010 01:30:36 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-mail.xml]
+030 27,2010 01:30:36 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-util.xml]
+030 27,2010 01:30:36 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-service.xml]
+030 27,2010 01:30:36 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading XML bean definitions from class path resource [applicationContext-timer.xml]
+030 27,2010 01:30:36 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Loading properties file from class path resource [mail.properties]
+030 27,2010 01:30:36 下午 : INFO [com.goodhope.thsale.CrawlerStarter.main()] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@11b1d80: defining beans [propertyPlaceholderConfigure,crawlerStarter,springMailService,javaMailSender,numberUtil,crawlServerInfoService,job,cronTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0]; root of factory hierarchy

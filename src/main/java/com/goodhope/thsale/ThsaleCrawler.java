@@ -17,6 +17,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 import com.goodhope.thsale.domain.PriceItem;
 import com.goodhope.thsale.domain.ThsaleServer;
+import com.goodhope.thsale.factory.ProxyFactory;
 import com.goodhope.thsale.factory.SpringBeanFactory;
 import com.goodhope.thsale.services.CrawlServerInfoService;
 import com.goodhope.thsale.services.SpringMailService;
@@ -29,9 +30,9 @@ public class ThsaleCrawler {
 		URL eu_thsaleUrl = new URL("http://www.thsale.com/world-of-warcraft-eu/");
 		CrawlServerInfoService crawlServerInfoService = (CrawlServerInfoService) SpringBeanFactory.getBean("crawlServerInfoService");
 
-		List<ThsaleServer> usThsaleServers = crawlServerInfoService.crawlGameServersInfo(us_thsaleUrl);
+		List<ThsaleServer> usThsaleServers = crawlServerInfoService.crawlGameServersInfo(us_thsaleUrl.openConnection(ProxyFactory.getProxy()));
 		LOG.debug("us complete.......................");
-		List<ThsaleServer> euThsaleServers = crawlServerInfoService.crawlGameServersInfo(eu_thsaleUrl);
+		List<ThsaleServer> euThsaleServers = crawlServerInfoService.crawlGameServersInfo(eu_thsaleUrl.openConnection(ProxyFactory.getProxy()));
 		LOG.debug("eu complete.......................");
 		Map<String, List<ThsaleServer>> serverMap = new HashMap<String, List<ThsaleServer>>();
 		serverMap.put("us", usThsaleServers);
@@ -43,7 +44,7 @@ public class ThsaleCrawler {
 		String fileFullName = System.getProperty("user.dir") + System.getProperty("file.separator") + "workbook.xls";
 		sendEmail(new String[] { fileFullName });
 		LOG.info("send email complete..........................");
-		
+
 	}
 
 	private static void sendEmail(String[] attachments) {

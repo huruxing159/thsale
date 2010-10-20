@@ -26,7 +26,7 @@ public class CrawlPriceRunner implements Runnable {
 	@Override
 	public void run() {
 		try {
-			TimeUnit.SECONDS.sleep(2);
+			TimeUnit.SECONDS.sleep(10);
 			priceList = new Source(new URL(priceUrl + ts.getThsaleValue()));
 			String priceListString = priceList.getTextExtractor().toString();
 			if (!StringUtils.hasText(priceListString) || !priceListString.contains("|")) {

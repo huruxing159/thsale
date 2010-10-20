@@ -20,6 +20,7 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
 
 import com.goodhope.thsale.domain.PriceItem;
 import com.goodhope.thsale.domain.ThsaleServer;
+import com.goodhope.thsale.factory.ProxyFactory;
 import com.goodhope.thsale.services.CrawlServerInfoService;
 import com.goodhope.thsale.services.SpringMailService;
 
@@ -36,9 +37,9 @@ public class CrawlAndEmailJob extends QuartzJobBean {
 			URL us_thsaleUrl = new URL("http://www.thsale.com/world-of-warcraft/");
 			URL eu_thsaleUrl = new URL("http://www.thsale.com/world-of-warcraft-eu/");
 
-			List<ThsaleServer> usThsaleServers = crawlServerInfoService.crawlGameServersInfo(us_thsaleUrl);
+			List<ThsaleServer> usThsaleServers = crawlServerInfoService.crawlGameServersInfo(us_thsaleUrl.openConnection(ProxyFactory.getProxy()));
 			LOG.debug("us complete.......................");
-			List<ThsaleServer> euThsaleServers = crawlServerInfoService.crawlGameServersInfo(eu_thsaleUrl);
+			List<ThsaleServer> euThsaleServers = crawlServerInfoService.crawlGameServersInfo(eu_thsaleUrl.openConnection(ProxyFactory.getProxy()));
 			LOG.debug("eu complete.......................");
 			Map<String, List<ThsaleServer>> serverMap = new HashMap<String, List<ThsaleServer>>();
 			serverMap.put("us", usThsaleServers);

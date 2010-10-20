@@ -1,7 +1,7 @@
 package com.goodhope.thsale.services;
 
 import java.io.IOException;
-import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -16,7 +16,7 @@ import com.goodhope.thsale.runner.CrawlPriceRunner;
 
 public class CrawlServerInfoService {
 
-	public List<ThsaleServer> crawlGameServersInfo(URL usthsaleUrl) throws IOException, InterruptedException {
+	public List<ThsaleServer> crawlGameServersInfo(URLConnection usthsaleUrl) throws IOException, InterruptedException {
 		Source s = new Source(usthsaleUrl);
 		Element gameServers = s.getElementById("selectGameServer");
 		List<Element> servers = gameServers.getChildElements();
@@ -30,7 +30,7 @@ public class CrawlServerInfoService {
 			}
 		}
 
-		ExecutorService executorService = Executors.newFixedThreadPool(2);
+		ExecutorService executorService = Executors.newFixedThreadPool(1);
 		for (ThsaleServer ts : thsaleServers) {
 			executorService.execute(new CrawlPriceRunner(ts));
 		}
